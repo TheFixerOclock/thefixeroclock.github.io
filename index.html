@@ -70,13 +70,14 @@
   background-image: url('Hero Image Background.png');
   background-size: cover;
   background-position: center;
-  position: relative;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 60px 20px 80px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 420px;
+  min-height: 320px; /* banner height */
   text-align: center;
 }
 
@@ -84,60 +85,51 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.3); /* light transparent overlay */
+  background: rgba(0,0,0,0.3); /* lighter transparent overlay */
+  z-index: 0;
   pointer-events: none;
 }
 
 .hero-inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   padding: 10px;
 }
 
-.hero-copy {
-  color: #fff;
-}
-
 .hero h1 {
   margin: 0;
-  font-size: clamp(28px, 5vw, 42px);
-  line-height: 1.1;
+  font-size: clamp(24px, 4vw, 36px);
+  line-height:1.2;
 }
 
 .hero p {
-  margin: 12px 0 20px;
+  margin: 10px 0 20px;
   color: rgba(255,255,255,0.95);
-  font-size: clamp(15px, 2.2vw, 18px);
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 .hero .cta {
   background: var(--accent);
-  color: #fff;
+  color: white;
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
-  transition: background 0.3s ease;
+  z-index: 2;
 }
 
-.hero .cta:hover {
-  background: #ff7a00; /* small hover effect */
-}
-
-.logo-hero {
-  width: 200px;
+.hero-logo {
+  width: 180px;
   height: auto;
   z-index: 2;
+  position: relative;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
 }
-
 
     /* SECTIONS */
     section{padding:48px 18px}
@@ -183,7 +175,7 @@
   <header class="nav">
     <div class="nav-inner container" role="banner">
       <div class="brand">
-        <img src="/Logo.png" alt="The Fixer O'clock logo" class="logo-hero">
+        <img src="The Fixer Transparent Logo.png" alt="The Fixer O'clock Logo" class="hero-logo">
       </div>
 
       <nav class="menu" role="navigation" aria-label="Main navigation">
