@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Fixer O’clock helps diaspora communities connect with trusted local support in Kenya — from errands and document services to family wellness checks and personal assistance." />
-  <meta name="keywords" content="diaspora Kenya services, fixer, errands, document authentication, family support, Kenya diaspora help" />
+  <meta name="description" content="The Fixer O’clock — reliable assistance for Kenyans abroad. From errands and document authentication to family wellness checks, we bridge the gap between diaspora communities and home." />
+  <meta name="keywords" content="The Fixer Oclock, diaspora Kenya, fixer services, document authentication, family wellness, errands, Kenya support" />
   <meta name="author" content="The Fixer O'clock" />
   <link rel="preload" href="Hero Image Background.png" as="image" />
   <title>The Fixer O'clock</title>
   <style>
     :root {
-      --accent: #0a1a3f; /* Your dark blue */
+      --accent: #0a1a3f; /* Brand dark blue */
       --text-dark: #222;
       --text-light: #fff;
       --maxw: 1200px;
@@ -18,10 +18,10 @@
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
       color: var(--text-dark);
       line-height: 1.6;
+      background-color: #fff;
     }
 
     /* HEADER */
@@ -30,7 +30,7 @@
       top: 0;
       width: 100%;
       background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
 
@@ -60,6 +60,9 @@
       text-decoration: none;
       color: var(--text-dark);
       font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       transition: color 0.3s;
     }
 
@@ -74,43 +77,57 @@
 
     /* HERO SECTION */
     .hero {
-      position: relative;
-      height: 90vh;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      margin-top: 80px; /* below navbar */
+      justify-content: space-between;
+      padding: 120px 5% 60px;
+      flex-wrap: wrap;
+      background: #fff;
     }
 
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+    .hero-text {
+      flex: 1 1 45%;
+      padding-right: 20px;
+      text-align: left;
     }
 
-    .hero-content {
-      position: absolute;
-      z-index: 2;
-      text-align: center;
+    .hero-text h1 {
+      font-size: clamp(32px, 5vw, 46px);
+      margin-bottom: 15px;
+      color: var(--text-dark);
     }
 
-    .hero-content .cta {
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .hero-text .cta {
       display: inline-block;
       background: var(--accent);
       color: var(--text-light);
       padding: 14px 28px;
       border-radius: 8px;
-      font-size: 18px;
       font-weight: 600;
       text-decoration: none;
       transition: 0.3s;
     }
 
-    .hero-content .cta:hover {
+    .hero-text .cta:hover {
       background: #08142e;
+    }
+
+    .hero-img {
+      flex: 1 1 50%;
+      text-align: right;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
     /* SERVICES */
@@ -124,7 +141,7 @@
     #services h2 {
       color: var(--accent);
       font-size: 32px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .service-grid {
@@ -136,8 +153,8 @@
     .service {
       background: #f8f9fb;
       border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
     }
 
@@ -145,8 +162,15 @@
       transform: translateY(-5px);
     }
 
+    .service-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
     .service h3 {
       color: var(--accent);
+      margin-bottom: 10px;
     }
 
     /* CONTACT */
@@ -176,7 +200,7 @@
 
     .contact-icons a {
       color: #fff;
-      font-size: 24px;
+      font-size: 26px;
       text-decoration: none;
       transition: 0.3s;
     }
@@ -193,63 +217,81 @@
       font-size: 14px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        padding-right: 0;
+      }
+
+      .hero-img {
+        text-align: center;
+        margin-top: 30px;
+      }
+
       nav ul {
         gap: 15px;
-      }
-      .hero {
-        height: 70vh;
-      }
-      .hero-content .cta {
-        font-size: 16px;
-        padding: 12px 22px;
       }
     }
   </style>
 </head>
 
 <body>
-
+  <!-- HEADER -->
   <header>
     <nav>
       <img src="logo.png" alt="The Fixer O'clock logo" class="logo" />
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact" class="contact-link">Contact</a></li>
+        <li><a href="#home">🏠 Home</a></li>
+        <li><a href="#services">💼 Services</a></li>
+        <li><a href="#contact" class="contact-link">✉️ Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- HERO -->
   <section id="home" class="hero">
-    <img src="Hero Image Background.png" alt="Helping diaspora connect home in Kenya" />
-    <div class="hero-content">
+    <div class="hero-text">
+      <h1>Connecting You Back Home, Seamlessly</h1>
+      <p>From errands and documents to family check-ins, The Fixer O’clock ensures peace of mind for Kenyans abroad — wherever you are.</p>
       <a href="#contact" class="cta">Talk to a Fixer</a>
+    </div>
+    <div class="hero-img">
+      <img src="Hero Image Background.png" alt="Diaspora support and assistance in Kenya" />
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
     <div class="service-grid">
       <div class="service">
+        <div class="service-icon">🚚</div>
         <h3>Errands & Logistics</h3>
-        <p>We handle errands and local coordination in Kenya — from deliveries to home visits — giving you peace of mind across borders.</p>
+        <p>We handle errands and coordination in Kenya — from deliveries to home visits — giving you peace of mind across borders.</p>
       </div>
       <div class="service">
+        <div class="service-icon">📄</div>
         <h3>Document Assistance</h3>
         <p>We assist with document verification, authentication, and delivery services with reliability and speed.</p>
       </div>
       <div class="service">
+        <div class="service-icon">❤️</div>
         <h3>Family Wellness Checks</h3>
         <p>We personally check in on your loved ones to ensure their safety and well-being back home.</p>
       </div>
       <div class="service">
+        <div class="service-icon">🤝</div>
         <h3>Personal Support</h3>
         <p>No task is too small — we bridge the gap between the diaspora and home with trusted, caring support.</p>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p><strong>Phone:</strong> +254 715 138 150 | +254 727 500 971</p>
@@ -260,9 +302,9 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 The Fixer O’clock. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
