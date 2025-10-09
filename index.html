@@ -1,175 +1,230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Fixer O'clock – your trusted partner in Kenya for diaspora support. From document authentication, family check-ins, and property management, we handle everything that matters back home.">
-  <meta name="keywords" content="Kenya diaspora support, document authentication Kenya, family wellness checks Kenya, fixer services Kenya, property support Kenya, The Fixer O'clock">
-  <meta name="author" content="The Fixer O'clock">
-  <title>The Fixer O'clock | Diaspora Support Services in Kenya</title>
-  <link rel="icon" type="image/png" href="The Fixer Transparent Logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Fixer O’clock – Where Distance Ends & Solutions Begin</title>
 
-  <!-- Font and Icons -->
+  <meta name="description" content="The Fixer O'clock provides trusted on-the-ground support for Kenyans abroad: document authentication, family wellness checks, property management, remittances, and more." />
+  <meta name="keywords" content="Kenya diaspora, document authentication, remittance, family support, property management Kenya, The Fixer O'clock" />
+  <link rel="icon" href="logo.png" />
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --accent: #0073e6;
-      --text-dark: #1c1c1c;
-      --text-light: #fff;
-      --bg-light: #f7f9fc;
+      --accent: #0b6cf2;
+      --text: #1b1b1f;
+      --muted: #6b7280;
       --maxw: 1200px;
     }
 
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
-    body {background-color: var(--bg-light); color: var(--text-dark);}
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
 
-    /* NAVBAR */
+    /* HEADER */
     header {
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      position: sticky; top: 0; z-index: 10;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    nav {
+
+    .nav {
       max-width: var(--maxw);
-      margin: auto;
+      margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
+      align-items: center;
+      padding: 12px 20px;
     }
-    nav img {
+
+    .nav img {
       height: 60px;
+      width: auto;
     }
-    nav ul {
+
+    .nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
     }
-    nav a {
-      text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {color: var(--accent);}
 
-    /* HERO SECTION */
+    .nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    .nav a.cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    /* HERO */
     .hero {
+      max-width: var(--maxw);
+      margin: 50px auto;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 60px 20px;
-      background-color: white;
+      padding: 0 20px;
+      gap: 30px;
     }
-    .hero-left {
+
+    .hero-content {
       flex: 1;
-      min-width: 300px;
+      min-width: 280px;
     }
-    .hero-left img {
-      width: 220px;
+
+    .hero-content img {
+      width: 180px;
       height: auto;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+      margin-bottom: 20px;
+      display: block;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
     }
-    .hero-right {
-      flex: 1;
-      min-width: 300px;
-      text-align: center;
-      background-image: url('Hero Image Background.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 16px;
-      min-height: 300px;
+
+    .hero-content h1 {
+      font-size: clamp(26px, 4vw, 38px);
+      margin-bottom: 12px;
+      color: var(--text);
+      line-height: 1.2;
     }
-    .hero-text {
-      text-align: left;
-      margin-top: 20px;
-    }
-    .hero-text h1 {
-      font-size: clamp(28px, 5vw, 44px);
-      line-height: 1.1;
-      color: var(--text-dark);
-    }
-    .hero-text p {
-      margin: 10px 0 20px;
+
+    .hero-content p {
+      color: var(--muted);
+      margin-bottom: 20px;
       font-size: 16px;
-      color: #333;
     }
-    .cta {
+
+    .hero-content .cta {
       background: var(--accent);
-      color: white;
-      padding: 12px 22px;
+      color: #fff;
+      padding: 12px 20px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      display: inline-block;
-      transition: background 0.3s;
-    }
-    .cta:hover {background: #005bb5;}
-
-    /* WHY CHOOSE US */
-    section {
-      max-width: var(--maxw);
-      margin: 80px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    h2 {font-size: 28px; margin-bottom: 20px;}
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .why-item {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .why-item i {color: var(--accent); font-size: 28px; margin-bottom: 10px;}
-
-    /* CONTACT SECTION */
-    .contact {
-      text-align: center;
-      background: var(--accent);
-      color: white;
-      padding: 60px 20px;
-    }
-    .contact a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin: 10px;
-      font-weight: 600;
-    }
-    .contact a i {font-size: 22px;}
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: white;
-      font-size: 14px;
+      gap: 8px;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
+    .hero-image {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    /* WHY */
+    section {
+      max-width: var(--maxw);
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .muted {
+      color: var(--muted);
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-top: 60px;
+    }
+
+    .contact h2 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact .btn {
+      background: #fff;
+      color: var(--accent);
+      padding: 12px 16px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 6px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
       .hero {
         flex-direction: column;
         text-align: center;
       }
-      .hero-right {
-        order: -1;
-        margin-bottom: 20px;
+
+      .hero-content img {
+        margin: 0 auto 20px;
       }
-      .hero-text {text-align: center;}
     }
   </style>
 </head>
@@ -177,75 +232,66 @@
 <body>
   <!-- HEADER -->
   <header>
-    <nav>
-      <img src="The Fixer Transparent Logo.png" alt="The Fixer O'clock Logo">
+    <div class="nav">
+      <img src="logo.png" alt="The Fixer O'clock logo">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#why">Why Choose Us</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="cta">Contact</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-left">
-      <img src="The Fixer Transparent Logo.png" alt="The Fixer O'clock Logo">
-      <div class="hero-text">
-        <h1>Where Distance Ends & Solutions Begin</h1>
-        <p>We help diaspora communities manage life back home in Kenya — from documents to wellness, we fix it all.</p>
-        <a href="#contact" class="cta">Talk to a Fixer</a>
-      </div>
+    <div class="hero-content">
+      <img src="logo.png" alt="The Fixer O'clock Logo">
+      <h1>Where Distance Ends & Solutions Begin</h1>
+      <p>We help Kenyans abroad handle everything — from legal documents and remittances to family check-ins and property management. Let us be your eyes and hands back home.</p>
+      <a href="#contact" class="cta"><i class="fab fa-whatsapp"></i> Talk to a Fixer</a>
     </div>
-    <div class="hero-right"></div>
+    <div class="hero-image">
+      <img src="hero.jpg" alt="People connecting across borders">
+    </div>
   </section>
 
   <!-- WHY CHOOSE US -->
   <section id="why">
     <h2>Why Choose The Fixer O'clock</h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <i class="fa-solid fa-handshake"></i>
-        <h3>Trusted Partnership</h3>
-        <p>We act on your behalf in Kenya with full transparency, updates, and accountability.</p>
-      </div>
-      <div class="why-item">
-        <i class="fa-solid fa-file-circle-check"></i>
-        <h3>Complete Assistance</h3>
-        <p>We handle document authentication, family check-ins, errands, and property oversight.</p>
-      </div>
-      <div class="why-item">
-        <i class="fa-solid fa-globe"></i>
-        <h3>Global Reach</h3>
-        <p>Serving diaspora in Europe, the USA, Canada, the UK, Australia, and the Gulf.</p>
-      </div>
+    <p class="muted">Built for the Kenyan diaspora — practical, personal, and professional support wherever you are.</p>
+    <div class="grid">
+      <div class="card"><h3>Trust & Transparency</h3><p>We provide honest, reliable updates and act as your trusted contact on the ground.</p></div>
+      <div class="card"><h3>All-in-One Support</h3><p>Documents, family, finances, and property — all handled seamlessly under one roof.</p></div>
+      <div class="card"><h3>Global Reach</h3><p>We serve clients across Europe, the USA, Canada, Australia, the UK, and the Gulf.</p></div>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
-    <p>We simplify your connection to home by offering tailored solutions to every challenge:</p>
-    <div class="why-grid">
-      <div class="why-item"><i class="fa-solid fa-file-signature"></i><h3>Document Authentication</h3><p>We liaise with authorities for legal and academic verifications in Kenya.</p></div>
-      <div class="why-item"><i class="fa-solid fa-house-user"></i><h3>Property Management</h3><p>Oversee rentals, maintenance, and purchases with trusted local representation.</p></div>
-      <div class="why-item"><i class="fa-solid fa-heartbeat"></i><h3>Family & Wellness Checks</h3><p>We check in on your loved ones and ensure their well-being and safety.</p></div>
-      <div class="why-item"><i class="fa-solid fa-briefcase"></i><h3>Business & Logistics</h3><p>Facilitation for business operations, supplies, and connections within Kenya.</p></div>
+    <p class="muted">Comprehensive assistance for Kenyans abroad.</p>
+    <div class="grid">
+      <div class="card"><h3>Document Authentication</h3><p>Fast, official verifications and embassy legalization services.</p></div>
+      <div class="card"><h3>Remittance Support</h3><p>Secure transfers, bill payments, and investment follow-ups.</p></div>
+      <div class="card"><h3>Family Wellness Check-ins</h3><p>On-site visits and reports to ensure loved ones are safe and well.</p></div>
+      <div class="card"><h3>Property & Legal Assistance</h3><p>Oversight, due diligence, and legal coordination back home.</p></div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>We’re always ready to assist you — wherever you are in the world.</p>
-    <a href="https://wa.me/254715138150"><i class="fab fa-whatsapp"></i> +254 715 138 150</a>
-    <a href="https://wa.me/254727500971"><i class="fab fa-whatsapp"></i> +254 727 500 971</a>
-    <a href="mailto:thefixeroclock@gmail.com"><i class="fa-solid fa-envelope"></i> thefixeroclock@gmail.com</a>
+    <p>Reach us directly on WhatsApp or email — we respond promptly.</p>
+    <a class="btn" href="https://wa.me/254715138150" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i> +254 715 138 150</a>
+    <a class="btn" href="https://wa.me/254727500971" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i> +254 727 500 971</a>
+    <a class="btn" href="mailto:thefixeroclock@gmail.com"><i class="fa-solid fa-envelope"></i> thefixeroclock@gmail.com</a>
   </section>
 
   <footer>
-    © 2025 The Fixer O'clock. All Rights Reserved.
+    © <span id="year"></span> The Fixer O'clock. All Rights Reserved.
   </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
