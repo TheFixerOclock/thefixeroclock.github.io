@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Fixer O'clock connects the Kenyan diaspora with reliable solutions back home — from document authentication to property management and family support. Trusted, transparent, and tailored to your needs." />
-  <meta name="keywords" content="Kenya diaspora services, The Fixer O'clock, document authentication Kenya, property management Kenya, family support Kenya, diaspora help" />
+  <meta name="description" content="The Fixer O'clock connects the Kenyan diaspora with trusted solutions back home — from document authentication to property management, errands, and family support." />
+  <meta name="keywords" content="Kenya diaspora services, The Fixer O'clock, document authentication Kenya, property management Kenya, family check-in Kenya, diaspora assistance" />
   <title>The Fixer O'clock | Your Trusted Partner in Kenya</title>
   <style>
     :root {
       --accent: #0a1a3f;
+      --light-bg: #f7f7f7;
       --text-dark: #111;
-      --text-light: #fff;
-      --bg-light: #f7f7f7;
-      --maxw: 1200px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: "Segoe UI", sans-serif;
@@ -30,26 +24,28 @@
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 14px 6%;
       background: #fff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
 
     header img.logo {
-      width: 180px;
+      width: 210px;
       height: auto;
+      object-fit: contain;
     }
 
     nav a {
-      margin-left: 22px;
+      margin-left: 20px;
       text-decoration: none;
       color: var(--text-dark);
       font-weight: 500;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -59,39 +55,37 @@
     .contact-btn {
       background: var(--accent);
       color: #fff;
-      padding: 10px 16px;
+      padding: 10px 18px;
       border-radius: 8px;
       text-decoration: none;
-      margin-left: 22px;
+      margin-left: 20px;
       font-weight: 600;
     }
 
     /* HERO */
     .hero {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 70px 6%;
-      background: #fff;
-      min-height: 480px;
       gap: 40px;
+      background: #fff;
     }
 
     .hero-text {
       flex: 1;
-      max-width: 550px;
+      max-width: 520px;
     }
 
     .hero-text h1 {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       color: var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .hero-text p {
-      color: #333;
       margin-bottom: 20px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     .hero-text a {
@@ -117,21 +111,21 @@
     /* SERVICES */
     section.services {
       padding: 80px 6%;
-      background: var(--bg-light);
+      background: var(--light-bg);
       text-align: center;
     }
 
     section.services h2 {
       font-size: 2rem;
-      margin-bottom: 40px;
       color: var(--accent);
+      margin-bottom: 40px;
     }
 
     .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
-      max-width: var(--maxw);
+      gap: 30px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -139,47 +133,43 @@
       background: #fff;
       border-radius: 12px;
       padding: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
     }
 
     .service:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
     }
 
     .service i {
       font-size: 36px;
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .service h3 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--accent);
       margin-bottom: 10px;
     }
 
-    .service ul {
-      list-style: none;
+    .service-details {
+      opacity: 0;
+      max-height: 0;
+      transition: 0.4s ease;
+      overflow: hidden;
+      font-size: 0.95rem;
+      color: #444;
       text-align: left;
-      margin: 0 0 10px 0;
-      padding: 0;
+      margin-top: 10px;
     }
 
-    .service ul li::before {
-      content: "✔ ";
-      color: var(--accent);
-    }
-
-    .service a {
-      display: inline-block;
-      margin-top: 8px;
-      background: var(--accent);
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.9rem;
+    .service:hover .service-details {
+      opacity: 1;
+      max-height: 150px;
     }
 
     /* WHY CHOOSE US */
@@ -188,51 +178,72 @@
       text-align: center;
     }
 
-    .why-us h2 {
+    section.why-us h2 {
       color: var(--accent);
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      font-size: 2rem;
     }
 
-    .why-us p {
+    section.why-us p {
       max-width: 800px;
       margin: 0 auto;
       color: #333;
+      font-size: 1rem;
     }
 
     /* CONTACT */
     section.contact {
-      padding: 60px 6%;
       background: var(--accent);
       color: #fff;
+      padding: 70px 6%;
       text-align: center;
     }
 
     section.contact h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    .contact-icons a {
-      margin: 0 14px;
-      color: #fff;
-      font-size: 1.5rem;
-      text-decoration: none;
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .contact-list li {
+      margin-bottom: 14px;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-list i {
+      margin-right: 10px;
+      font-size: 1.4rem;
     }
 
     footer {
-      background: #000;
+      background: var(--accent);
       color: #fff;
       text-align: center;
       padding: 16px;
       font-size: 0.9rem;
     }
 
-    @media(max-width: 768px){
-      .hero { flex-direction: column-reverse; text-align: center; }
-      .hero-img img { width: 100%; }
-      .hero-text { max-width: 100%; }
-      header { flex-direction: column; }
-      nav a, .contact-btn { margin: 10px 6px; display: inline-block; }
+    @media(max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-img img {
+        width: 100%;
+      }
+      nav a, .contact-btn {
+        display: inline-block;
+        margin: 8px;
+      }
     }
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -240,7 +251,7 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="The Fixer O'clock Logo" class="logo" />
+    <img src="logo.png" alt="The Fixer O'clock Logo" class="logo">
     <nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
@@ -256,44 +267,72 @@
       <a href="#contact">Talk to a Fixer</a>
     </div>
     <div class="hero-img">
-      <img src="Hero Image Background.png" alt="The Fixer O'clock hero image" />
+      <img src="Hero Image Background.png" alt="Hero image showing trusted assistance" />
     </div>
   </section>
 
   <section class="services" id="services">
     <h2>Our Services</h2>
     <div class="service-grid">
+
       <div class="service">
         <i class="fas fa-file-signature"></i>
         <h3>Document Authentication</h3>
-        <ul>
-          <li>Embassy legalization</li>
-          <li>Government verifications</li>
-          <li>Secure courier handling</li>
-        </ul>
-        <a href="#contact">Learn More</a>
+        <div class="service-details">
+          <p>• Embassy & government legalization<br>
+          • Verification & translation<br>
+          • Secure document transfers</p>
+        </div>
       </div>
 
       <div class="service">
         <i class="fas fa-home"></i>
         <h3>Property Management</h3>
-        <ul>
-          <li>Property inspection & reporting</li>
-          <li>Tenant coordination</li>
-          <li>Maintenance oversight</li>
-        </ul>
-        <a href="#contact">Learn More</a>
+        <div class="service-details">
+          <p>• Property supervision<br>
+          • Tenant coordination<br>
+          • Maintenance follow-up</p>
+        </div>
       </div>
 
       <div class="service">
         <i class="fas fa-heart"></i>
-        <h3>Family Support</h3>
-        <ul>
-          <li>Wellness check-ins</li>
-          <li>Errand coordination</li>
-          <li>Care updates & reports</li>
-        </ul>
-        <a href="#contact">Learn More</a>
+        <h3>Family Support & Check-ins</h3>
+        <div class="service-details">
+          <p>• Family wellness checks<br>
+          • Errands & home visits<br>
+          • Regular updates & reports</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-briefcase"></i>
+        <h3>Business Liaison</h3>
+        <div class="service-details">
+          <p>• Local representation<br>
+          • Meeting coordination<br>
+          • Government liaison</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-car"></i>
+        <h3>Vehicle & Logistics Assistance</h3>
+        <div class="service-details">
+          <p>• Car purchases & inspections<br>
+          • Licensing & paperwork<br>
+          • Trusted driver arrangements</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Errand & Personal Assistance</h3>
+        <div class="service-details">
+          <p>• Daily errands<br>
+          • Hospital or school visits<br>
+          • Tailored personal support</p>
+        </div>
       </div>
     </div>
   </section>
@@ -305,12 +344,11 @@
 
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Call / WhatsApp:</strong> +254715138150 | +254727500971</p>
-    <p><strong>Email:</strong> thefixeroclock@gmail.com</p>
-    <div class="contact-icons">
-      <a href="https://wa.me/254715138150"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:thefixeroclock@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
+    <ul class="contact-list">
+      <li><i class="fab fa-whatsapp" style="color:#25D366"></i> +254 715 138 150</li>
+      <li><i class="fab fa-whatsapp" style="color:#25D366"></i> +254 727 500 971</li>
+      <li><i class="fas fa-envelope"></i> thefixeroclock@gmail.com</li>
+    </ul>
   </section>
 
   <footer>
