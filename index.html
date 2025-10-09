@@ -1,72 +1,400 @@
-<section class="services" id="services">
-  <h2>Our Services</h2>
-  <div class="service-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Fixer O'clock connects the Kenyan diaspora with reliable solutions back home — from document authentication to property management, family support, and wellness services. Trusted, transparent, and tailored to your needs." />
+  <meta name="keywords" content="Kenya diaspora services, The Fixer O'clock, document authentication Kenya, property management Kenya, family support Kenya, diaspora help" />
+  <title>The Fixer O'clock | Your Trusted Partner in Kenya</title>
 
-    <div class="service">
-      <i class="fas fa-file-signature"></i>
-      <h3>Document Authentication</h3>
-      <ul>
-        <li>Birth and marriage certificates</li>
-        <li>Academic transcripts</li>
-        <li>Embassy document verification</li>
-      </ul>
-      <a href="#contact">Learn More</a>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <style>
+    :root {
+      --accent: #0b2347; /* your deep brand blue */
+      --bg-light: #f9f9f9;
+      --maxw: 1200px;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    header img {
+      height: 70px;
+      width: auto;
+      object-fit: contain;
+      z-index: 1201;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    /* HERO */
+    .hero {
+      background: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 6%;
+      max-width: var(--maxw);
+      margin: auto;
+      gap: 30px;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 22px;
+    }
+
+    .cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+    }
+
+    /* SERVICES */
+    section.services {
+      padding: 80px 6%;
+      background: var(--bg-light);
+      text-align: center;
+    }
+
+    section.services h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: var(--accent);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    .service {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .service i {
+      font-size: 36px;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+
+    .service h3 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .service ul {
+      list-style: none;
+      text-align: left;
+      margin: 0 auto;
+      padding: 0;
+      width: fit-content;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .service ul li {
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .service ul li::before {
+      content: "✔ ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .service:hover ul {
+      opacity: 1;
+      max-height: 200px;
+      margin-top: 8px;
+    }
+
+    .service:hover i {
+      transform: scale(1.2);
+    }
+
+    /* WHY CHOOSE US */
+    section.why {
+      padding: 80px 6%;
+      text-align: center;
+      background: #fff;
+    }
+
+    section.why h2 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 30px;
+    }
+
+    section.why p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    /* CONTACT */
+    section.contact {
+      padding: 80px 6%;
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+    }
+
+    section.contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .contact-list li {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    .contact-list i {
+      margin-right: 10px;
+      color: #00ffcc;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 16px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-image {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="The Fixer O'clock Logo" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Talk to a Fixer</h1>
+      <p>Your reliable partner in Kenya — from document authentication to family support, we get it done right.</p>
+      <a href="#contact" class="cta">Contact Us</a>
     </div>
-
-    <div class="service">
-      <i class="fas fa-home"></i>
-      <h3>Property Management</h3>
-      <ul>
-        <li>Tenant management and rent collection</li>
-        <li>Maintenance and repairs</li>
-        <li>Property inspection updates</li>
-      </ul>
-      <a href="#contact">Learn More</a>
+    <div class="hero-image">
+      <img src="Hero Image Background.png" alt="The Fixer O'clock Hero Image">
     </div>
+  </section>
 
-    <div class="service">
-      <i class="fas fa-heart"></i>
-      <h3>Family Support</h3>
-      <ul>
-        <li>Wellness check-ins</li>
-        <li>Care coordination</li>
-        <li>Gift and package delivery</li>
-      </ul>
-      <a href="#contact">Learn More</a>
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="service-header">
+          <i class="fas fa-file-signature"></i>
+          <h3>Document Authentication</h3>
+        </div>
+        <ul>
+          <li>Birth and marriage certificates</li>
+          <li>Academic transcripts</li>
+          <li>Embassy document verification</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-header">
+          <i class="fas fa-home"></i>
+          <h3>Property Management</h3>
+        </div>
+        <ul>
+          <li>Tenant management and rent collection</li>
+          <li>Maintenance and repairs</li>
+          <li>Property inspection updates</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-header">
+          <i class="fas fa-heart"></i>
+          <h3>Family Support</h3>
+        </div>
+        <ul>
+          <li>Wellness check-ins</li>
+          <li>Care coordination</li>
+          <li>Gift and package delivery</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-header">
+          <i class="fas fa-briefcase"></i>
+          <h3>Business Services</h3>
+        </div>
+        <ul>
+          <li>Business registration and permits</li>
+          <li>Courier and documentation</li>
+          <li>Local representation</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-header">
+          <i class="fas fa-plane"></i>
+          <h3>Travel & Logistics</h3>
+        </div>
+        <ul>
+          <li>Airport pickups</li>
+          <li>Visa and travel arrangements</li>
+          <li>Secure courier services</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-header">
+          <i class="fas fa-users"></i>
+          <h3>Community Engagement</h3>
+        </div>
+        <ul>
+          <li>Events and networking</li>
+          <li>Charity initiatives</li>
+          <li>Diaspora integration support</li>
+        </ul>
+      </div>
+
     </div>
+  </section>
 
-    <div class="service">
-      <i class="fas fa-briefcase"></i>
-      <h3>Business Services</h3>
-      <ul>
-        <li>Business registration and permits</li>
-        <li>Courier and documentation</li>
-        <li>Local representation</li>
-      </ul>
-      <a href="#contact">Learn More</a>
-    </div>
+  <section class="why" id="why">
+    <h2>Why Choose Us</h2>
+    <p>We understand the challenges the diaspora faces — that’s why The Fixer O’clock delivers trustworthy, fast, and transparent support across Kenya. From document verification to property management, we handle it all so you can focus on what matters most.</p>
+  </section>
 
-    <div class="service">
-      <i class="fas fa-plane"></i>
-      <h3>Travel & Logistics</h3>
-      <ul>
-        <li>Airport pickups</li>
-        <li>Visa and travel arrangements</li>
-        <li>Secure courier services</li>
-      </ul>
-      <a href="#contact">Learn More</a>
-    </div>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <ul class="contact-list">
+      <li><i class="fab fa-whatsapp"></i> +254 715 138150</li>
+      <li><i class="fab fa-whatsapp"></i> +254 727 500971</li>
+      <li><i class="fas fa-envelope"></i> thefixeroclock@gmail.com</li>
+    </ul>
+  </section>
 
-    <div class="service">
-      <i class="fas fa-users"></i>
-      <h3>Community Engagement</h3>
-      <ul>
-        <li>Events and networking</li>
-        <li>Charity initiatives</li>
-        <li>Diaspora integration support</li>
-      </ul>
-      <a href="#contact">Learn More</a>
-    </div>
-
-  </div>
-</section>
+  <footer>
+    <p>&copy; 2025 The Fixer O'clock. All rights reserved.</p>
+  </footer>
+</body>
+</html>
