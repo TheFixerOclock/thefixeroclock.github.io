@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Fixer O’clock – Where Distance Ends & Solutions Begin</title>
 
-  <meta name="description" content="The Fixer O'clock provides trusted on-the-ground support for Kenyans abroad — from document authentication and property management to family wellness check-ins and remittance coordination." />
-  <meta name="keywords" content="Kenyan diaspora, fixer services, document authentication, family support, property management, Kenya, The Fixer O'clock" />
+  <meta name="description" content="The Fixer O'clock connects Kenyans abroad with trusted on-the-ground help in Kenya — from document authentication to family wellness check-ins, property management, and local coordination." />
+  <meta name="keywords" content="Kenyan diaspora services, The Fixer O'clock, document authentication, family check-ins, property management, trusted fixer Kenya" />
+  <meta name="author" content="The Fixer O'clock" />
 
   <link rel="icon" href="logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,18 +16,18 @@
   <style>
     :root {
       --accent: #0b6cf2;
-      --darkblue: #001833;
+      --darkblue: #001f3f;
       --text: #1a1a1a;
       --muted: #6b7280;
       --maxw: 1200px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
       color: var(--text);
       background: #fff;
-      line-height: 1.5;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
@@ -48,54 +49,46 @@
       padding: 10px 20px;
     }
 
-    .nav img {
-      height: 65px;
-      width: auto;
-    }
+    .nav img { height: 70px; width: auto; }
 
     .nav ul {
       display: flex;
-      gap: 20px;
       list-style: none;
+      gap: 20px;
     }
 
     .nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: 600;
-      transition: 0.2s ease;
+      transition: 0.3s ease;
     }
 
     .nav a:hover { color: var(--accent); }
 
     .nav a.cta {
-      background: #fff;
-      color: var(--accent);
-      border: 2px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
       padding: 8px 14px;
       border-radius: 8px;
     }
 
-    .nav a.cta:hover {
-      background: var(--accent);
-      color: #fff;
-    }
+    .nav a.cta:hover { background: #0849a3; }
 
     /* HERO */
     .hero {
-      background: #f8f9fb;
       padding: 80px 20px;
-      overflow: hidden;
+      background: #f9fafc;
     }
 
     .hero-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      max-width: var(--maxw);
-      margin: 0 auto;
       gap: 40px;
+      flex-wrap: wrap;
     }
 
     .hero-text {
@@ -104,20 +97,20 @@
     }
 
     .hero-text img.hero-logo {
-      max-width: 200px;
+      max-width: 220px;
       margin-bottom: 25px;
     }
 
     .hero-text h1 {
-      font-size: clamp(28px, 4vw, 42px);
-      margin-bottom: 15px;
+      font-size: clamp(28px, 4vw, 44px);
       line-height: 1.2;
+      margin-bottom: 15px;
       color: var(--text);
     }
 
     .hero-text p {
-      color: #444;
       margin-bottom: 25px;
+      color: #444;
       font-size: 17px;
     }
 
@@ -131,6 +124,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
+      transition: 0.3s ease;
     }
 
     .hero-text .cta:hover { background: #0849a3; }
@@ -144,8 +138,8 @@
     .hero-img img {
       width: 100%;
       max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
       object-fit: cover;
     }
 
@@ -197,6 +191,7 @@
     }
 
     .contact h2 { color: #fff; margin-bottom: 15px; }
+
     .contact .btn {
       display: inline-flex;
       align-items: center;
@@ -218,8 +213,8 @@
       color: var(--muted);
       font-size: 14px;
       padding: 25px;
-      margin-top: 40px;
       border-top: 1px solid #eee;
+      background: #fafafa;
     }
 
     @media (max-width: 900px) {
@@ -249,7 +244,7 @@
       <div class="hero-text">
         <img src="logo.png" alt="The Fixer O'clock" class="hero-logo">
         <h1>Where Distance Ends &amp; Solutions Begin</h1>
-        <p>We bridge the gap for Kenyans abroad with document authentication, family check-ins, property management, and more — handled with trust and transparency.</p>
+        <p>Helping Kenyans abroad manage home affairs seamlessly — from documentation and family care to trusted local coordination, done transparently and efficiently.</p>
         <a href="#contact" class="cta"><i class="fab fa-whatsapp"></i> Talk to a Fixer</a>
       </div>
       <div class="hero-img">
@@ -261,30 +256,30 @@
   <!-- WHY US -->
   <section id="why">
     <h2>Why Choose The Fixer O'clock</h2>
-    <p class="muted">Professional, reliable, and compassionate assistance on the ground in Kenya.</p>
+    <p class="muted">Reliable, professional, and compassionate assistance on the ground in Kenya.</p>
     <div class="grid">
-      <div class="card"><h3>Trusted & Transparent</h3><p>We provide real-time updates and full accountability on every service.</p></div>
-      <div class="card"><h3>Comprehensive Help</h3><p>From government offices to family homes — we handle every detail for you.</p></div>
-      <div class="card"><h3>Global Support</h3><p>Serving Kenyans in Europe, USA, UK, Canada, Australia, and the Gulf.</p></div>
+      <div class="card"><h3>Trusted & Transparent</h3><p>We provide real-time updates and full accountability for every service we handle.</p></div>
+      <div class="card"><h3>Comprehensive Support</h3><p>From government offices to family homes — we handle every detail for you.</p></div>
+      <div class="card"><h3>Global Reach</h3><p>Serving Kenyans in Europe, USA, UK, Canada, Australia, and the Gulf.</p></div>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
-    <p class="muted">Tailored support to meet your personal and family needs back home.</p>
+    <p class="muted">Tailored solutions to manage your personal, legal, and family needs back home.</p>
     <div class="grid">
-      <div class="card"><h3>Document Authentication</h3><p>We handle official certifications, embassy verifications, and legal follow-ups.</p></div>
-      <div class="card"><h3>Family Wellness Check-ins</h3><p>Regular visits and updates to ensure your loved ones are doing well.</p></div>
-      <div class="card"><h3>Property Oversight</h3><p>Professional management and supervision of your investments.</p></div>
-      <div class="card"><h3>Local Coordination</h3><p>We manage errands, remittances, and on-the-ground logistics for you.</p></div>
+      <div class="card"><h3>Document Authentication</h3><p>We handle government and embassy verifications swiftly and professionally.</p></div>
+      <div class="card"><h3>Family Wellness Check-ins</h3><p>We visit and update you about your loved ones’ well-being.</p></div>
+      <div class="card"><h3>Property Oversight</h3><p>Professional supervision of your assets and projects in Kenya.</p></div>
+      <div class="card"><h3>Local Coordination</h3><p>We handle errands, payments, and logistics efficiently on your behalf.</p></div>
     </div>
   </section>
 
-  <!-- CONTACT (unchanged) -->
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Reach us directly through WhatsApp or Email — we respond fast and effectively.</p>
+    <p>Reach us directly through WhatsApp or Email — we respond promptly.</p>
     <a href="https://wa.me/254715138150" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> +254 715 138 150</a>
     <a href="https://wa.me/254727500971" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> +254 727 500 971</a>
     <a href="mailto:thefixeroclock@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> thefixeroclock@gmail.com</a>
