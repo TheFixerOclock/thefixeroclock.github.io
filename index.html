@@ -3,159 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Fixer O’clock — reliable assistance for Kenyans abroad. From errands and document authentication to family wellness checks, we bridge the gap between diaspora communities and home." />
-  <meta name="keywords" content="The Fixer Oclock, diaspora Kenya, fixer services, document authentication, family wellness, errands, Kenya support" />
-  <meta name="author" content="The Fixer O'clock" />
-  <link rel="preload" href="Hero Image Background.png" as="image" />
-  <title>The Fixer O'clock</title>
+  <meta name="description" content="The Fixer O’clock — your trusted partner in Kenya helping the diaspora with errands, document authentication, and family wellness support. Reliable, fast, and transparent service from real people who care." />
+  <meta name="keywords" content="Kenya diaspora, document assistance, family support, errands in Kenya, fixer services, wellness check, The Fixer O’clock" />
+  <title>The Fixer O’clock | Your Trusted Partner in Kenya</title>
   <style>
     :root {
       --accent: #0a1a3f; /* Brand dark blue */
-      --text-dark: #222;
-      --text-light: #fff;
       --maxw: 1200px;
     }
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--text-dark);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
       line-height: 1.6;
-      background-color: #fff;
-    }
-
-    /* HEADER */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
       background: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
     }
 
-    nav {
-      max-width: var(--maxw);
-      margin: 0 auto;
+    header {
+      background: #fff;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
+      justify-content: space-between;
+      padding: 10px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    .logo {
-      height: 60px;
+    header img {
+      height: 90px; /* Increased logo size */
       width: auto;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-
     nav a {
+      margin-left: 25px;
       text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 500;
-      display: flex;
+      color: #333;
+      font-weight: 600;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.3s;
     }
 
-    nav a:hover {
+    nav a.contact {
       color: var(--accent);
     }
 
-    nav a.contact-link {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    /* HERO SECTION */
     .hero {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 120px 5% 60px;
-      flex-wrap: wrap;
-      background: #fff;
+      padding: 130px 40px 80px;
+      max-width: var(--maxw);
+      margin: auto;
+      gap: 40px;
     }
 
     .hero-text {
-      flex: 1 1 45%;
-      padding-right: 20px;
-      text-align: left;
+      flex: 1;
     }
 
     .hero-text h1 {
-      font-size: clamp(32px, 5vw, 46px);
-      margin-bottom: 15px;
-      color: var(--text-dark);
+      font-size: 40px;
+      margin: 0 0 15px;
     }
 
     .hero-text p {
       font-size: 18px;
       margin-bottom: 25px;
-      color: #555;
     }
 
-    .hero-text .cta {
-      display: inline-block;
+    .cta {
       background: var(--accent);
-      color: var(--text-light);
-      padding: 14px 28px;
+      color: #fff;
+      padding: 12px 24px;
       border-radius: 8px;
-      font-weight: 600;
       text-decoration: none;
-      transition: 0.3s;
+      font-weight: 600;
     }
 
-    .hero-text .cta:hover {
-      background: #08142e;
-    }
-
-    .hero-img {
-      flex: 1 1 50%;
-      text-align: right;
-    }
-
-    .hero-img img {
-      width: 100%;
-      height: auto;
+    .hero img {
+      flex: 1;
+      max-width: 100%;
       border-radius: 10px;
-      object-fit: cover;
     }
 
-    /* SERVICES */
-    section#services {
+    section {
+      padding: 80px 40px;
       max-width: var(--maxw);
-      margin: 80px auto;
-      padding: 0 20px;
+      margin: auto;
+    }
+
+    h2 {
       text-align: center;
-    }
-
-    #services h2 {
       color: var(--accent);
+      margin-bottom: 40px;
       font-size: 32px;
-      margin-bottom: 30px;
     }
 
-    .service-grid {
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
 
     .service {
-      background: #f8f9fb;
-      border-radius: 10px;
+      background: #f8f8f8;
+      border-radius: 12px;
       padding: 25px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
     }
 
     .service:hover {
@@ -163,148 +124,203 @@
     }
 
     .service-icon {
-      font-size: 32px;
-      margin-bottom: 12px;
+      font-size: 40px;
       color: var(--accent);
+      margin-bottom: 15px;
     }
 
-    .service h3 {
-      color: var(--accent);
-      margin-bottom: 10px;
+    .service ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      text-align: left;
+      font-size: 15px;
     }
 
-    /* CONTACT */
-    #contact {
+    .service ul li::before {
+      content: "• ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .service .btn {
       background: var(--accent);
-      color: var(--text-light);
-      text-align: center;
-      padding: 60px 20px;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
     }
 
-    #contact h2 {
-      font-size: 32px;
+    .why-us {
+      background: #f0f4fa;
+      border-radius: 10px;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .why-us h2 {
+      color: var(--accent);
+    }
+
+    .why-us p {
+      max-width: 800px;
+      margin: 10px auto 25px;
+      font-size: 17px;
+    }
+
+    .why-us ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .why-us li::before {
+      content: "✔ ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .contact {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 80px 40px;
+    }
+
+    .contact h2 {
+      color: white;
       margin-bottom: 20px;
     }
 
-    #contact p {
+    .contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
       font-size: 18px;
       margin: 8px 0;
     }
 
-    .contact-icons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .contact-icons a {
-      color: #fff;
-      font-size: 26px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .contact-icons a:hover {
-      color: #ccc;
-    }
-
     footer {
-      background: #0a0a0a;
-      color: #aaa;
+      background: #000;
+      color: white;
       text-align: center;
-      padding: 15px;
+      padding: 15px 0;
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       .hero {
         flex-direction: column;
         text-align: center;
       }
-
-      .hero-text {
-        padding-right: 0;
+      .hero img {
+        width: 100%;
       }
-
-      .hero-img {
-        text-align: center;
-        margin-top: 30px;
+      header {
+        flex-direction: column;
+        gap: 10px;
       }
-
-      nav ul {
-        gap: 15px;
+      nav a {
+        margin: 0 10px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- HEADER -->
   <header>
+    <img src="logo.png" alt="The Fixer O’clock Logo">
     <nav>
-      <img src="logo.png" alt="The Fixer O'clock logo" class="logo" />
-      <ul>
-        <li><a href="#home">🏠 Home</a></li>
-        <li><a href="#services">💼 Services</a></li>
-        <li><a href="#contact" class="contact-link">✉️ Contact</a></li>
-      </ul>
+      <a href="#home">🏠 Home</a>
+      <a href="#services">💼 Services</a>
+      <a href="#contact" class="contact">✉️ Contact</a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
+  <section class="hero" id="home">
     <div class="hero-text">
-      <h1>Connecting You Back Home, Seamlessly</h1>
-      <p>From errands and documents to family check-ins, The Fixer O’clock ensures peace of mind for Kenyans abroad — wherever you are.</p>
+      <h1>Your Trusted Partner in Kenya</h1>
+      <p>Helping the diaspora with errands, document assistance, and family support back home — professionally, efficiently, and with care.</p>
       <a href="#contact" class="cta">Talk to a Fixer</a>
     </div>
-    <div class="hero-img">
-      <img src="Hero Image Background.png" alt="Diaspora support and assistance in Kenya" />
-    </div>
+    <img src="Hero Image Background.png" alt="Hero Image">
   </section>
 
-  <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
-    <div class="service-grid">
+    <div class="services">
       <div class="service">
         <div class="service-icon">🚚</div>
         <h3>Errands & Logistics</h3>
-        <p>We handle errands and coordination in Kenya — from deliveries to home visits — giving you peace of mind across borders.</p>
+        <ul>
+          <li>Pickup & delivery coordination</li>
+          <li>On-ground errands & purchases</li>
+          <li>Family support logistics</li>
+        </ul>
+        <a href="#contact" class="btn">Learn More</a>
       </div>
+
       <div class="service">
         <div class="service-icon">📄</div>
         <h3>Document Assistance</h3>
-        <p>We assist with document verification, authentication, and delivery services with reliability and speed.</p>
+        <ul>
+          <li>Authentication & verification</li>
+          <li>Government paperwork support</li>
+          <li>University & business documentation</li>
+        </ul>
+        <a href="#contact" class="btn">Learn More</a>
       </div>
+
       <div class="service">
         <div class="service-icon">❤️</div>
         <h3>Family Wellness Checks</h3>
-        <p>We personally check in on your loved ones to ensure their safety and well-being back home.</p>
+        <ul>
+          <li>Regular home visits</li>
+          <li>Health & welfare updates</li>
+          <li>Emergency response coordination</li>
+        </ul>
+        <a href="#contact" class="btn">Learn More</a>
       </div>
+
       <div class="service">
         <div class="service-icon">🤝</div>
         <h3>Personal Support</h3>
-        <p>No task is too small — we bridge the gap between the diaspora and home with trusted, caring support.</p>
+        <ul>
+          <li>Tailored one-on-one help</li>
+          <li>Local research & coordination</li>
+          <li>Confidential, reliable assistance</li>
+        </ul>
+        <a href="#contact" class="btn">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +254 715 138 150 | +254 727 500 971</p>
-    <p><strong>Email:</strong> thefixeroclock@gmail.com</p>
-    <div class="contact-icons">
-      <a href="https://wa.me/254715138150" target="_blank">💬</a>
-      <a href="mailto:thefixeroclock@gmail.com">✉️</a>
-    </div>
+  <section class="why-us">
+    <h2>Why Choose The Fixer O’clock?</h2>
+    <p>We understand the challenges the diaspora face when trying to get things done back home. That’s why The Fixer O’clock exists — to offer dependable, personalized, and affordable help in Kenya while you’re abroad.</p>
+    <ul>
+      <li>Trusted, verified network across Kenya</li>
+      <li>Fast updates and open communication</li>
+      <li>Transparent, no-hidden-cost pricing</li>
+      <li>Professional team that treats every request personally</li>
+    </ul>
   </section>
 
-  <!-- FOOTER -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <a href="https://wa.me/254715138150" target="_blank">💬 WhatsApp: +254 715 138 150</a><br>
+    <a href="https://wa.me/254727500971" target="_blank">💬 WhatsApp: +254 727 500 971</a><br>
+    <a href="mailto:thefixeroclock@gmail.com">✉️ thefixeroclock@gmail.com</a>
+  </section>
+
   <footer>
-    <p>© 2025 The Fixer O’clock. All Rights Reserved.</p>
+    <p>© 2025 The Fixer O’clock. All rights reserved.</p>
   </footer>
 </body>
 </html>
