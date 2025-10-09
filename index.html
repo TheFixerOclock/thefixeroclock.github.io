@@ -10,7 +10,7 @@
   <title>The Fixer O'clock</title>
   <style>
     :root {
-      --accent: #0a1a3f;
+      --accent: #0a1a3f; /* Your dark blue */
       --text-dark: #222;
       --text-light: #fff;
       --maxw: 1200px;
@@ -79,9 +79,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
       text-align: center;
-      padding-top: 80px;
+      overflow: hidden;
+      margin-top: 80px; /* below navbar */
     }
 
     .hero img {
@@ -106,4 +106,163 @@
       font-size: 18px;
       font-weight: 600;
       text-decoration: none;
-      transiti
+      transition: 0.3s;
+    }
+
+    .hero-content .cta:hover {
+      background: #08142e;
+    }
+
+    /* SERVICES */
+    section#services {
+      max-width: var(--maxw);
+      margin: 80px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    #services h2 {
+      color: var(--accent);
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .service {
+      background: #f8f9fb;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service h3 {
+      color: var(--accent);
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--accent);
+      color: var(--text-light);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #contact h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #contact p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .contact-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .contact-icons a {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact-icons a:hover {
+      color: #ccc;
+    }
+
+    footer {
+      background: #0a0a0a;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 15px;
+      }
+      .hero {
+        height: 70vh;
+      }
+      .hero-content .cta {
+        font-size: 16px;
+        padding: 12px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <img src="logo.png" alt="The Fixer O'clock logo" class="logo" />
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" class="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="Hero Image Background.png" alt="Helping diaspora connect home in Kenya" />
+    <div class="hero-content">
+      <a href="#contact" class="cta">Talk to a Fixer</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service">
+        <h3>Errands & Logistics</h3>
+        <p>We handle errands and local coordination in Kenya — from deliveries to home visits — giving you peace of mind across borders.</p>
+      </div>
+      <div class="service">
+        <h3>Document Assistance</h3>
+        <p>We assist with document verification, authentication, and delivery services with reliability and speed.</p>
+      </div>
+      <div class="service">
+        <h3>Family Wellness Checks</h3>
+        <p>We personally check in on your loved ones to ensure their safety and well-being back home.</p>
+      </div>
+      <div class="service">
+        <h3>Personal Support</h3>
+        <p>No task is too small — we bridge the gap between the diaspora and home with trusted, caring support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> +254 715 138 150 | +254 727 500 971</p>
+    <p><strong>Email:</strong> thefixeroclock@gmail.com</p>
+    <div class="contact-icons">
+      <a href="https://wa.me/254715138150" target="_blank">💬</a>
+      <a href="mailto:thefixeroclock@gmail.com">✉️</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 The Fixer O’clock. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
