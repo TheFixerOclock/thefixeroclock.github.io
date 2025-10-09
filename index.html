@@ -67,18 +67,23 @@
     }
 
     .nav a:hover { color: var(--accent); }
+
     .nav a.cta {
-      background: var(--accent);
-      color: #fff;
+      background: #fff;
+      color: var(--accent);
+      border: 2px solid var(--accent);
       padding: 8px 14px;
       border-radius: 8px;
     }
 
+    .nav a.cta:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
     /* HERO */
     .hero {
-      position: relative;
       background: #f8f9fb;
-      color: #111;
       padding: 80px 20px;
       overflow: hidden;
     }
@@ -91,8 +96,6 @@
       max-width: var(--maxw);
       margin: 0 auto;
       gap: 40px;
-      position: relative;
-      z-index: 2;
     }
 
     .hero-text {
@@ -109,7 +112,7 @@
       font-size: clamp(28px, 4vw, 42px);
       margin-bottom: 15px;
       line-height: 1.2;
-      color: #0b6cf2;
+      color: var(--text);
     }
 
     .hero-text p {
@@ -142,7 +145,7 @@
       width: 100%;
       max-width: 500px;
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
       object-fit: cover;
     }
 
@@ -190,7 +193,6 @@
       color: #fff;
       text-align: center;
       padding: 70px 20px;
-      border-radius: 0;
       margin-top: 60px;
     }
 
@@ -279,7 +281,7 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT (unchanged) -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Reach us directly through WhatsApp or Email — we respond fast and effectively.</p>
