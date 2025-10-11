@@ -1,10 +1,7 @@
-# robots.txt for The Fixer O'clock
+# robots.txt for The Fixer O'clock website
 User-agent: *
+Disallow: /TheFixerOclock/
 Allow: /
 
-# Prevent indexing of sensitive files (if any)
-Disallow: /admin/
-Disallow: /tmp/
-
-# Sitemap link
+# Sitemap
 Sitemap: https://thefixeroclock.github.io/sitemap.xml
