@@ -1,7 +1,9 @@
-# robots.txt for The Fixer O'clock website
+# robots.txt for The Fixer O'clock Website
 User-agent: *
-Disallow: /TheFixerOclock/
 Allow: /
 
-# Sitemap
+# Prevent crawlers from indexing the GitHub repository
+Disallow: https://github.com/TheFixerOclock/
+
+# Sitemap for Google and Bing
 Sitemap: https://thefixeroclock.github.io/sitemap.xml
